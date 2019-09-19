@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carter Markegard</title>
+    <%= stylesheet_link_tag "navbar.css"%>
+  </head>
+
+  <body>
+    <ul class="navBar">
+      <li class="tab" ><%= link_to "home", root_path%>Home</li>
+      <li class="tab"><%= link_to "resume", resume_path%>Resume</li>
+      <li class="tab"><%= link_to "portfolio", portfolio_path%>Portfolio</li>
+    </ul>
+
+    <%= yield %>
+  </body>
+</html>
