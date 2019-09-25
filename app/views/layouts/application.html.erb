@@ -7,11 +7,15 @@
   </head>
 
   <body>
-    <ul class="navBar">
-      <li class="tab" ><%= link_to "home", root_path%>Home</li>
-      <li class="tab"><%= link_to "resume", resume_path%>Resume</li>
-      <li class="tab"><%= link_to "portfolio", portfolio_path%>Portfolio</li>
-    </ul>
+    <div class="background">
+      <img class="background_img"> <%= image_tag @picture_url %></img>
+      <h1 class="centered_name">Carter Markegard</h1>
+      <ul class="navBar">
+        <li class="tab" ><%= link_to "Home", root_path%></li>
+        <li class="tab"><%= link_to "Resume", resume_path%></li>
+        <li class="tab"><%= link_to "Portfolio", portfolio_path%></li>
+      </ul>
+    </div>
 
     <%= yield %>
   </body>
