@@ -21,10 +21,12 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  adapter: sqlite3
+  encoding: unicode
   database: test_database
-  pool: 5
-  timeout: 5000
+  pool: 10
+  username: <%= %x(whoami) %>
+  password:
 
 production:
   adapter: postgresql

@@ -3,20 +3,34 @@
   <head>
     <title>Carter Markegard</title>
     <%= stylesheet_link_tag "navbar.css"%>
-    <%= favicon_link_tag %>
-
+    <%= favicon_link_tag asset_path("favicon.ico") %>
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div class="background">
-      <img class="background_img"> <%= image_tag @picture_url %></img>
-      <h1 class="centered_name">Carter Markegard</h1>
-      <ul class="navBar">
+    <nav>
+      <div class="navBar">
+        <h1 class="centered_name">CARTER MARKEGARD</h1>
+      </div>
+      <ul class="tabs">
         <li class="tab" ><%= link_to "Home", root_path%></li>
         <li class="tab"><%= link_to "Resume", resume_path%></li>
         <li class="tab"><%= link_to "Portfolio", portfolio_path%></li>
       </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <%= javascript_include_tag 'navBar' %>
+
+    <!--
+    <div class="background">
+      <img class="background_img"> <%= image_tag @picture_url %></img>
     </div>
+    -->
 
     <%= yield %>
   </body>

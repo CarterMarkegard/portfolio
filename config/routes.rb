@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'resume' => 'pages#resume'
   get 'portfolio' => 'pages#portfolio'
 
-  # resource :pages
+  resource :pages
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
