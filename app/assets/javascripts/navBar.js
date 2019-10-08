@@ -16,9 +16,9 @@ function navSlide() {
     });
     // Burger animation
     burger.classList.toggle('toggle');
-  }
+  };
 
-  burger.addEventListener('click',animateNavbar());
+  burger.addEventListener('click', animateNavbar());
 
 }
 
