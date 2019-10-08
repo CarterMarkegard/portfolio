@@ -1,9 +1,9 @@
-const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.tabs');
-  const tabs = document.querySelectorAll('.tab')
+function navSlide() {
+  var burger = document.querySelector('.burger');
+  var nav = document.querySelector('.tabs');
+  var tabs = document.querySelectorAll('.tab');
 
-  burger.addEventListener('click',()=>{
+  function animateNavbar() {
     // Toggle side navBar
     nav.classList.toggle('side_navBar_active');
     // Animate tabs
@@ -11,13 +11,14 @@ const navSlide = () => {
       if(tab.style.animation){
         tab.style.animation = '';
       } else {
-        tab.style.animation = 'sideNavBarFade .5s ease forwards ' + (index / 7 + .4) + 's';
+        tab.style.animation = 'sideNavBarFade .5s ease forwards ' + (index / 7 + 0.4) + 's';
       }
     });
     // Burger animation
     burger.classList.toggle('toggle');
-  });
+  }
 
+  burger.addEventListener('click',animateNavbar());
 
 }
 
