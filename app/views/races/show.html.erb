@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <H1 class="raceTitle">
+    Carter's Race Times
+    <div class="raceTable">
+      <table>
+        <tr>
+          <% for i in 0..@raceLabelArray.length do %>
+            <td><%= @raceLabelArray[i] %></td>
+          <% end %>
+        </tr>
+        <% @raceData.each do |race|%>
+          <tr class="raceName">
+            <td colspan="3"><%= race.raceName %></td>
+          </tr>
+          <tr>
+            <td><%= race.time %></td>
+            <td><%= race.distance %></td>
+            <td><%= race.averagePace %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </H1>
+</body>
