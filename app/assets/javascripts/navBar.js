@@ -3,7 +3,7 @@ function navSlide() {
   var nav = document.querySelector('.tabs');
   var tabs = document.querySelectorAll('.tab');
 
-  function animateNavbar() {
+  burger.addEventListener('click', function() {
     // Toggle side navBar
     nav.classList.toggle('side_navBar_active');
     // Animate tabs
@@ -16,10 +16,9 @@ function navSlide() {
     });
     // Burger animation
     burger.classList.toggle('toggle');
-  };
-
-  burger.addEventListener('click', animateNavbar());
+  });
 
 }
 
+// Call the function navSlide so that it creates to event listener
 navSlide();
