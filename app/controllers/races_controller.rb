@@ -3,4 +3,23 @@ class RacesController < ApplicationController
     @raceData = Race.all.order(created_at: :desc)
     @raceLabelArray = ["Time", "Distance", "Average Pace"]
   end
+
+  def new
+    @race = Race.new
+  end
+
+  def create
+    @race = Race.new(race_params)
+    if @race.save
+      #Successful save
+    else
+      render 'new'
+    end
+  end
+
+  private
+    def race_params
+      params.require(:race).permit(:raceName, :time, :distance, :averagePace)
+    end
+
 end
