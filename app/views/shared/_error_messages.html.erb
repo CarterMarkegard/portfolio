@@ -1,0 +1,16 @@
+<!--
+  This is a partial that builds the error messages for the newRace form
+-->
+
+<% if @race.errors.any? %>
+<div id="error_explanation">
+  <div class="alert alert-danger">
+    The form contains <%= pluralize(@race.errors.count, "error") %>.
+  </div>
+  <ul>
+  <% @race.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

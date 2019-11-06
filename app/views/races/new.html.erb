@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <%= stylesheet_link_tag "newRace", media: 'all', 'data-turbolinks-track' => true%>
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form">
+    <p class="title"> Add a new race </p>
+      <%= form_for(@race) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :raceName, "Race Name" %>
+        <%= f.text_field :raceName, class: 'form-control'%>
+
+        <%= f.label :time, "Time" %>
+        <%= f.text_field :time, class: 'form-control'%>
+
+        <%= label :distance, "Distance" %>
+        <%= f.text_field :distance, class: 'form-control'%>
+
+        <%= f.label :averagePace, "Average Pace" %>
+        <%= f.text_field :averagePace, class: 'form-control'%>
+
+        <%= f.submit "Add Race", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+
+  <!--
+  <div class="form">
+    <p class="title"> Add a new race </p>
+    <form action="/races" method="post">
+      <p class="fieldTitle">Race Name</p><br>
+      <input type="text" name="raceName"><br>
+
+      <p class="fieldTitle">Time</p><br>
+      <input type="text" name="raceTime"><br>
+
+      <p class="fieldTitle">Distance</p><br>
+      <input type="radio" name="distance"><br>
+
+      <p class="fieldTitle">Average Pace</p><br>
+      <input type="text" name="averagePace"><br>
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+  -->
+</body>

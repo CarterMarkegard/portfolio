@@ -15,6 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( navBar.js )
 Rails.application.config.assets.precompile += %w( navbar.css )
-Rails.application.config.assets.precompile += %w( computer.jpeg )
+Rails.application.config.assets.precompile += %w( headshot.jpg )
 Rails.application.config.assets.precompile += %w( favicon.ico )
+Rails.application.config.assets.precompile += %w( pages/home.scss )
 Rails.application.config.assets.precompile += %w( newRace.scss )
