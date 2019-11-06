@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <%= stylesheet_link_tag "pages/home"%>
 </head>
 <body>
   <div class="IntroText">
-    <p class="Title">Howdy, I'm <span class="Name">Carter Markegard</span></p>
-    <p class="Description">
+    <h1 class="Title">Howdy, I'm <span class="Name">Carter Markegard</span></h1>
+    <h2 class="Description">
       I use science and technology to create amazing things.
-    </p>
+    </h2>
   </div>
   <div class="Headshot">
-    <img> <%= image_tag "headshot.jpg" %> </img>
+    <%= image_tag("headshot.jpg", alt: "A stock picture of a professional.") %>
   </div>
 </body>
 </html>
