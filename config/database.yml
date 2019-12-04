@@ -35,4 +35,3 @@ production:
   password:
   database: production_database
   timeout: 5000
-  port: 5432
