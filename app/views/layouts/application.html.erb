@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Carter Markegard</title>
-    <%= stylesheet_link_tag "navbar.css"%>
+    <%= stylesheet_link_tag "partials/navbar.css"%>
     <%= favicon_link_tag asset_path("favicon.ico") %>
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
   </head>
@@ -10,10 +10,10 @@
   <body>
     <nav>
       <div class="navBar">
-        <h1 class="centered_name">CARTER MARKEGARD</h1>
+        <h1 class="centered_name"><%= link_to "CARTER MARKEGARD", root_path%></h1>
       </div>
       <ul class="tabs">
-        <li class="tab" ><%= link_to "Home", root_path%></li>
+        <li class="tab" ><%= link_to "About", root_path%></li>
         <li class="tab"><%= link_to "Resume", resume_path%></li>
         <li class="tab"><%= link_to "Portfolio", portfolio_path%></li>
         <li class="tab"><%= link_to "Races", races_path%></li>
@@ -29,5 +29,6 @@
     <%= javascript_include_tag 'navBar' %>
 
     <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
