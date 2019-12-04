@@ -1,6 +1,5 @@
 class CreateRaces < ActiveRecord::Migration[5.2]
   def change
-    drop_table :races
     create_table :races do |t|
       t.string :raceName
       t.string :time
