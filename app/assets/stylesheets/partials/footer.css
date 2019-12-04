@@ -1,9 +1,8 @@
-.footer {
-  height: 5%;
-  background-color: black;
-  margin-top: 3%;
+footer {
+  background-color: #3F3F3F;
 }
 
-.footer p {
+footer p {
+  text-align: center;
   color: white;
 }

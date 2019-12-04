@@ -20,4 +20,5 @@ Rails.application.config.assets.precompile += %w( favicon.ico )
 Rails.application.config.assets.precompile += %w( newRace.scss )
 
 Rails.application.config.assets.precompile += %w( pages/* )
+Rails.application.config.assets.precompile += %w( images/* )
 Rails.application.config.assets.precompile += %w( partials/* )

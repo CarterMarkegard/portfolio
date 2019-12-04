@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
-  def home
+  def about
   end
 
   def resume
   end
 
-  def portfolio
+  def projects
   end
 end

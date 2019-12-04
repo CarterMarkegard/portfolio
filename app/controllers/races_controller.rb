@@ -12,7 +12,7 @@ class RacesController < ApplicationController
     @race = Race.new(race_params)
     if @race.save
       #Successful save
-      # I should print a confirmation text or redirect the user
+      redirect_to races_url
     else
       render 'new'
     end

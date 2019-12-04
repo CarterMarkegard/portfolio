@@ -5,6 +5,24 @@
     box-sizing: border-box;
 }
 
+/* Used to make footer stay on bottom */
+.Container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.Content {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
+/* Pushes footer to bottom */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -14,7 +32,7 @@ nav {
 }
 
 .centered_name {
-  color: #242424;
+  color: #e6e6e6;
   letter-spacing: 4px;
   font-size: 22;
 }
@@ -31,14 +49,14 @@ nav {
 }
 
 .tabs a {
-  color: #242424;
+  color: #e6e6e6;
   text-decoration: none;
   letter-spacing: 2px;
   font-size: 14px;
 }
 
 .tabs a:hover {
-  color: #e6e6e6;
+  color: #242424;
 }
 
 .tab {
@@ -52,7 +70,7 @@ nav {
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: #242424;
+  background-color: #e6e6e6;
   margin: 5px;
   transition: all .3s ease;
 }

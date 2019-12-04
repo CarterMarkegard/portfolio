@@ -8,27 +8,31 @@
   </head>
 
   <body>
-    <nav>
-      <div class="navBar">
-        <h1 class="centered_name"><%= link_to "CARTER MARKEGARD", root_path%></h1>
-      </div>
-      <ul class="tabs">
-        <li class="tab" ><%= link_to "About", root_path%></li>
-        <li class="tab"><%= link_to "Resume", resume_path%></li>
-        <li class="tab"><%= link_to "Portfolio", portfolio_path%></li>
-        <li class="tab"><%= link_to "Races", races_path%></li>
-        <li class="tab"><%= link_to "Add Race", addRace_path%></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
+    <div class="Container">
+      <nav>
+        <div class="navBar">
+          <h1 class="centered_name"><%= link_to "CARTER MARKEGARD", root_path%></h1>
+        </div>
+        <ul class="tabs">
+          <li class="tab" ><%= link_to "About", root_path%></li>
+          <li class="tab"><%= link_to "Resume", resume_path%></li>
+          <li class="tab"><%= link_to "Projects", projects_path%></li>
+          <li class="tab"><%= link_to "Races", races_path%></li>
+          <li class="tab"><%= link_to "Add Race", addRace_path%></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
 
-    <%= javascript_include_tag 'navBar' %>
+      <%= javascript_include_tag 'navBar' %>
+      <div class="Content">
+        <%= yield %>
+      </div>
 
-    <%= yield %>
-    <%= render 'shared/footer' %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
