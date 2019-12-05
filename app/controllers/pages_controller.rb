@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  def resume
+  def contact
   end
 
   def projects
