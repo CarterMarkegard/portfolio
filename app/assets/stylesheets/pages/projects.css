@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+
+.ProjectContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  margin: 2%;
+}
+
+.Container h3 {
+  text-align: center;
+}
+
+.Container p {
+  text-align: center;
+}
+
+.Container img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.Container img:hover {
+  opacity: 50%;
+}
